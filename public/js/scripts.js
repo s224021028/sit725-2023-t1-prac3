@@ -28,3 +28,17 @@ function limitCharacters(element)
         element.value = numValue.substr(0, maxLength)
     }
 }
+
+function checkEmptyInput()
+{
+    const num1 = document.getElementById("num1")
+    const num2 = document.getElementById("num2")
+    const dialog = document.getElementById("dialog")
+    if (num1.value.length == 0 || num2.value.length == 0)
+    {
+        var instance = M.Modal.init(dialog)
+        instance.open()
+        return false
+    }
+    return true
+}
